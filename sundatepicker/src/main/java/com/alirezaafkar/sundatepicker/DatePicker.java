@@ -3,10 +3,10 @@ package com.alirezaafkar.sundatepicker;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -155,10 +155,10 @@ public class DatePicker extends DialogFragment
         super.onStart();
         Window window = getDialog().getWindow();
         if (window != null) {
-            ViewGroup.LayoutParams params = window.getAttributes();
+            WindowManager.LayoutParams params = window.getAttributes();
             params.width = getResources().getDimensionPixelSize(R.dimen.dialog_width);
             params.height = getResources().getDimensionPixelSize(R.dimen.dialog_height);
-            window.setAttributes((WindowManager.LayoutParams) params);
+            window.setAttributes(params);
             window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         }
     }

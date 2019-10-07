@@ -2,15 +2,16 @@ package com.alirezaafkar.sundatepicker.fragments;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import com.alirezaafkar.sundatepicker.R;
 import com.alirezaafkar.sundatepicker.adapters.MonthAdapter;
@@ -18,7 +19,7 @@ import com.alirezaafkar.sundatepicker.interfaces.DateInterface;
 
 import java.util.Locale;
 
-import static android.support.v7.widget.RecyclerView.RecycledViewPool;
+import static androidx.recyclerview.widget.RecyclerView.RecycledViewPool;
 
 /**
  * Created by Alireza Afkar on 2/5/16 AD.
@@ -90,7 +91,7 @@ public class MonthFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    private class PagerAdapter extends android.support.v4.view.PagerAdapter implements View.OnClickListener {
+    private class PagerAdapter extends androidx.viewpager.widget.PagerAdapter implements View.OnClickListener {
         private int mCurrentYear;
         private RecycledViewPool viewPool = new RecycledViewPool();
 
